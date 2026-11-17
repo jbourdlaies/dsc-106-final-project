@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Care Parrots: Exploring Parrot Conservation</title>
+
+    <meta name="description" content="An interactive exploration of parrot biodiversity, biological traits, and extinction risk.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- D3.js library for interactive visualizations -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Website JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header class="site-header">
+        <nav class="navbar container">
+
+            <a href="#home" class="logo">
+                <span class="logo-icon">🦜</span>
+                PARROT WATCH
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Our Research</a></li>
+                <li><a href="#explore">Explore the Data</a></li>
+                <li><a href="#project">About the Project</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Hero Section -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content container">
+
+                <span class="eyebrow">
+                    BIODIVERSITY · CONSERVATION · DISCOVERY
+                </span>
+
+                <h1>
+                    Understanding the
+                    <span>Future of Parrots.</span>
+                </h1>
+
+                <p>
+                    What can the characteristics of parrot species
+                    tell us about their vulnerability to extinction?
+                    Let's explore the relationships between biodiversity,
+                    biological traits, and conservation risk.
+                </p>
+
+                <a href="#explore" class="button button-light">
+                    Explore the Data ↓
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- Introduction -->
+
+        <section class="intro section-padding" id="about">
+
+            <div class="container intro-grid">
+
+                <div class="intro-text">
+
+                    <span class="eyebrow eyebrow-green">
+                        WHY PARROTS MATTER
+                    </span>
+
+                    <h2>A colorful world worth protecting.</h2>
+
+                    <p>
+                        Parrots are among the most recognizable and
+                        diverse groups of birds in the world. Found
+                        across tropical and subtropical regions, they
+                        display remarkable variation in size, diet,
+                        habitat, and physical characteristics.
+                    </p>
+
+                    <p>
+                        They are responsible for transporting and 
+                        dispersing seeds, their messy eating gives 
+                        ample food for ground dweller species, 
+                        they eat plant parasites and insect pests, 
+                        they serve as pollinators, and they are 
+                        an indicator species (meaning that a decline 
+                        in the parrot population is a sign of 
+                        environmental stress, deforestation, or 
+                        climate change).
+                    </p>
+
+                    <p>
+                        However, many parrot species face growing
+                        conservation challenges. Habitat loss,
+                        environmental displacement, and other threats
+                        have placed some species at considerable
+                        risk of extinction.
+                    </p>
+
+                    <p>
+                        By examining the characteristics of different
+                        species, we hope to better understand
+                        potential patterns associated with extinction
+                        vulnerability.
+                    </p>
+
+                </div>
+
+
+                <div class="intro-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=1000&q=85"
+                        alt="Colorful parrot perched in a natural environment"
+                    >
+
+                    <div class="image-caption">
+                        Exploring the diversity of parrot species
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Research Topics -->
+
+        <section class="topics section-padding">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow eyebrow-green">
+                        OUR AREAS OF INTEREST
+                    </span>
+
+                    <h2>Connecting traits to conservation.</h2>
+
+                    <p>
+                        We investigate different dimensions of
+                        parrot diversity to explore what might
+                        contribute to extinction vulnerability.
+                    </p>
+
+                </div>
+
+
+                <div class="topic-grid">
+
+                    <article class="topic-card">
+
+                        <div class="topic-icon">🌿</div>
+
+                        <h3>Species Diversity</h3>
+
+                        <p>
+                            Explore the variation in biological
+                            characteristics across different
+                            parrot species.
+                            (PLACEHOLDER)
+                        </p>
+
+                    </article>
+
+
+                    <article class="topic-card">
+
+                        <div class="topic-icon">🪶</div>
+
+                        <h3>Biological Traits</h3>
+
+                        <p>
+                            Examine how physical and ecological
+                            characteristics differ among species.
+                            (PLACEHOLDER)
+                        </p>
+
+                    </article>
+
+
+                    <article class="topic-card">
+
+                        <div class="topic-icon">🌎</div>
+
+                        <h3>Extinction Risk</h3>
+
+                        <p>
+                            Investigate how species characteristics
+                            may be associated with conservation
+                            status and vulnerability.
+                            (PLACEHOLDER)
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Data Visualizations -->
+
+        <section class="explore section-padding" id="explore">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow eyebrow-green">
+                        INTERACTIVE DATA EXPLORATION
+                        (PLACEHOLDER)
+                    </span>
+
+                    <h2>What does the data reveal?</h2>
+
+                    <p>
+                        Explore the relationships between parrot
+                        characteristics, biodiversity, and extinction
+                        risk through four interactive data visualizations.
+                        (PLACEHOLDER)
+                    </p>
+
+                </div>
+
+
+                <!-- Visualization 1 -->
+
+                <div class="visualization-container">
+
+                    <div class="visualization-header">
+
+                        <div>
+                            <span class="visualization-label">
+                                DATA VISUALIZATION 01
+                                (PLACEHOLDER)
+                            </span>
+
+                            <h3>Parrot Traits & Extinction Risk(PLACEHOLDER)</h3>
+                        </div>
+
+                        <span class="coming-soon">
+                            IN DEVELOPMENT
+                            (PLACEHOLDER)
+                        </span>
+
+                    </div>
+
+                    <div id="visualization-1"
+                         class="visualization-placeholder">
+
+                        <div class="placeholder-content">
+
+                            <span class="placeholder-icon">🦜</span>
+
+                            <h3>Visualization One</h3>
+
+                            <p>
+                                Exploring associations between parrot
+                                biological traits and extinction risk.
+                                (PLACEHOLDER)
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Visualization 2 -->
+
+                <div class="visualization-container">
+
+                    <div class="visualization-header">
+
+                        <div>
+                            <span class="visualization-label">
+                                DATA VISUALIZATION 02
+                            </span>
+
+                            <h3>Parrot Biodiversity & Characteristics(PLACEHOLDER)</h3>
+                        </div>
+
+                        <span class="coming-soon">
+                            IN DEVELOPMENT
+                            (PLACEHOLDER)
+                        </span>
+
+                    </div>
+
+                    <div id="visualization-2"
+                         class="visualization-placeholder">
+
+                        <div class="placeholder-content">
+
+                            <span class="placeholder-icon">🌿</span>
+
+                            <h3>Visualization Two</h3>
+
+                            <p>
+                                An interactive exploration of parrot
+                                biodiversity and species characteristics.
+                                (PLACEHOLDER)
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Visualization 3 -->
+
+                <div class="visualization-container">
+
+                    <div class="visualization-header">
+
+                        <div>
+                            <span class="visualization-label">
+                                DATA VISUALIZATION 03
+                                (PLACEHOLDER)
+                            </span>
+
+                            <h3>Species Distribution & Patterns(PLACEHOLDER)</h3>
+                        </div>
+
+                        <span class="coming-soon">
+                            IN DEVELOPMENT
+                            (PLACEHOLDER)
+                        </span>
+
+                    </div>
+
+                    <div id="visualization-3"
+                         class="visualization-placeholder">
+
+                        <div class="placeholder-content">
+
+                            <span class="placeholder-icon">🌎</span>
+
+                            <h3>Visualization Three</h3>
+
+                            <p>
+                                Discovering patterns and differences
+                                across parrot species.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Visualization 4 -->
+
+                <div class="visualization-container">
+
+                    <div class="visualization-header">
+
+                        <div>
+                            <span class="visualization-label">
+                                DATA VISUALIZATION 04
+                                (PLACEHOLDER)
+                            </span>
+
+                            <h3>Conservation & Extinction Patterns(PLACEHOLDER)</h3>
+                        </div>
+
+                        <span class="coming-soon">
+                            IN DEVELOPMENT
+                            (PLACEHOLDER)
+                        </span>
+
+                    </div>
+
+                    <div id="visualization-4"
+                         class="visualization-placeholder">
+
+                        <div class="placeholder-content">
+
+                            <span class="placeholder-icon">📊</span>
+
+                            <h3>Visualization Four</h3>
+
+                            <p>
+                                Investigating broader patterns in
+                                parrot conservation and extinction risk.
+                                (PLACEHOLDER)
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <p class="visualization-note">
+                    Interactive visualizations developed using D3.js.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Write-Up -->
+
+        <section class="project section-padding" id="project">
+
+            <div class="container project-content">
+
+                <span class="eyebrow">
+                    ABOUT OUR PROJECT
+                </span>
+
+                <h2>Exploring biodiversity through data.</h2>
+
+                <p>
+                    This project uses data visualization to explore
+                    patterns in parrot biodiversity and conservation.
+                    Through interactive graphics and data-driven
+                    storytelling, we aim to make complex environmental
+                    data and relationships easier to understand.
+                </p>
+
+
+                <div class="project-writeup">
+
+                    <div class="writeup-item">
+
+                        <h3>01. What have we done so far?</h3>
+
+                        <p>
+                            Our progress and completed project work
+                            will be documented here.
+                            (PLACEHOLDER)
+                        </p>
+
+                    </div>
+
+
+                    <div class="writeup-item">
+
+                        <h3>02. What will be the most challenging part?</h3>
+
+                        <p>
+                            Our anticipated design challenges and
+                            how we plan to address them will be
+                            discussed here.
+                            (PLACEHOLDER)
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <a href="#home" class="footer-logo">
+                🦜 CARE PARROTS
+            </a>
+
+            <p>
+                A DSC 106 Final Project ·
+                <span id="current-year"></span>
+            </p>
+
+            <a href="#home" class="back-to-top">
+                Back to top ↑
+            </a>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
