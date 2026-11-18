@@ -340,7 +340,7 @@ d3.csv("data/bird_data.csv").then(data => {
             d.percentage >= 45 ? "#FFFFFF" : "#244B38"
         )
         .text(d =>
-            d.percentage >= 5
+            d.percentage >= 0
                 ? `${Math.round(d.percentage)}%`
                 : ""
         );
