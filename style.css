@@ -509,3 +509,129 @@ p {
 .visualization-container:last-of-type {
     margin-bottom: 0;
 }
+
+/* Visualization 1 */
+
+/* Main visualization container */
+
+#visualization-1 {
+    width: 100%;
+    min-height: 0;
+    padding: 20px;
+    background: #FFFFFF;
+    border: none;
+    overflow-x: auto;
+}
+
+#visualization-1 .heatmap-chart-area {
+    width: 100%;
+}
+
+/* Sorting controls */
+
+#visualization-1 .heatmap-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+#visualization-1 .heatmap-controls label {
+    color: #405345;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#visualization-1 .heatmap-controls select {
+    padding: 9px 13px;
+    border: 1px solid #CAD7C9;
+    border-radius: 6px;
+    background: #F7FAF5;
+    color: #244B38;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* SVG */
+
+#visualization-1 svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+/* Axes */
+
+#visualization-1 .heatmap-x-axis text,
+#visualization-1 .heatmap-y-axis text {
+    fill: #405345;
+    font-size: 12px;
+}
+
+#visualization-1 .heatmap-x-axis path,
+#visualization-1 .heatmap-y-axis path,
+#visualization-1 .heatmap-x-axis line,
+#visualization-1 .heatmap-y-axis line {
+    stroke: #CAD7C9;
+}
+
+/* Cell labels */
+
+#visualization-1 .heatmap-cell-label {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Legend */
+
+#visualization-1 .heatmap-legend text {
+    fill: #405345;
+    font-size: 11px;
+}
+
+/* Tooltip */
+
+.heatmap-tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: #17382B;
+    color: #FFFFFF;
+    padding: 13px 16px;
+    border-radius: 7px;
+    font-size: 12px;
+    line-height: 1.7;
+    max-width: 270px;
+    z-index: 2000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Error message */
+
+#visualization-1 .heatmap-error {
+    color: #B33B36;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 768px) {
+
+    #visualization-1 {
+        padding: 10px;
+    }
+
+    #visualization-1 .heatmap-controls {
+        justify-content: flex-start;
+    }
+
+    #visualization-1 .heatmap-x-axis text,
+    #visualization-1 .heatmap-y-axis text {
+        font-size: 10px;
+    }
+
+}
