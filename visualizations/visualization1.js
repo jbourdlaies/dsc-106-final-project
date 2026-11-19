@@ -1,3 +1,5 @@
+// Created by Justin Bourdlaies
+
 // Configuration
 
 const heatmapContainer = d3.select("#visualization-1");

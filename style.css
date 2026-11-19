@@ -635,3 +635,216 @@ p {
     }
 
 }
+
+/* Visualization 2 */
+
+/* Main chart container */
+
+#visualization-2 {
+    width: 100%;
+    overflow-x: auto;
+    padding: 15px 5px;
+}
+
+.bc-root {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+}
+
+/* Dropdown controls */
+
+.bc-controls {
+    margin: 0 0 15px 10px;
+    font-size: 14px;
+    color: var(--forest);
+}
+
+.bc-controls label {
+    font-weight: 600;
+}
+
+.bc-controls select {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-left: 6px;
+    border: 1px solid #CAD7C9;
+    border-radius: 6px;
+    background: #F7FAF5;
+    color: var(--forest);
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* SVG chart */
+
+.bc-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Chart titles */
+
+.bc-title {
+    font-size: 24px;
+    font-weight: 700;
+    fill: var(--deep-green);
+}
+
+.bc-subtitle {
+    font-size: 15px;
+    fill: var(--muted);
+}
+
+.bc-note {
+    font-size: 14px;
+    font-weight: 600;
+    fill: #9B7136;
+}
+
+/* Bars */
+
+.bc-bar {
+    fill: #A8B99A;
+    cursor: pointer;
+    transition: fill 0.2s;
+}
+
+.bc-bar--top {
+    fill: var(--forest);
+}
+
+.bc-bar:hover {
+    stroke: var(--deep-green);
+    stroke-width: 1.5px;
+}
+
+/* Percentage labels */
+
+.bc-value {
+    font-size: 15px;
+    font-weight: 700;
+    fill: var(--deep-green);
+    pointer-events: none;
+    paint-order: stroke;
+    stroke: #FFFFFF;
+    stroke-width: 7px;
+    stroke-linejoin: round;
+}
+
+/* Axes */
+
+.bc-axis text {
+    font-size: 13px;
+    fill: var(--text);
+}
+
+.bc-yaxis text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.bc-axis path,
+.bc-axis line {
+    stroke: #CAD7C9;
+}
+
+.bc-axis-label {
+    font-size: 13px;
+    fill: var(--muted);
+}
+
+/* Grid lines */
+
+.bc-grid line {
+    stroke: #E8EEE3;
+}
+
+/* Overall threatened-species reference line */
+
+.bc-baseline line {
+    stroke: var(--deep-green);
+    stroke-width: 1.5px;
+    stroke-dasharray: 5 4;
+}
+
+.bc-baseline text {
+    font-size: 13px;
+    font-weight: 600;
+    fill: var(--deep-green);
+}
+
+/* Interactive tooltip */
+
+.bc-tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: var(--deep-green);
+    color: #FFFFFF;
+    border: 1px solid var(--forest);
+    border-radius: 7px;
+    padding: 12px 14px;
+    font-size: 13px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 300px;
+    z-index: 100;
+    transition: opacity 0.15s;
+}
+
+.bc-tt-break {
+    color: #D5E0D3;
+    font-size: 12px;
+}
+
+/* Error message */
+
+.bc-error {
+    color: #B33B36;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+
+    #visualization-2 {
+        padding: 10px 0;
+    }
+
+    .bc-controls {
+        margin-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .bc-controls select {
+        max-width: 100%;
+    }
+
+    .bc-title {
+        font-size: 21px;
+    }
+
+    .bc-subtitle,
+    .bc-note {
+        font-size: 13px;
+    }
+
+    .bc-axis text,
+    .bc-yaxis text {
+        font-size: 11px;
+    }
+
+    .bc-axis-label {
+        font-size: 11px;
+    }
+
+}
