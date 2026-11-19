@@ -848,3 +848,559 @@ p {
     }
 
 }
+
+#visualization-2 {
+    position: relative;
+    min-height: 0;
+    display: block;
+    text-align: left;
+    padding: 4px 0 0;
+    background: transparent;
+    border: 0;
+}
+
+.bubble-intro {
+    max-width: 760px;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.bubble-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    margin-bottom: 18px;
+}
+
+.bubble-toolbar label {
+    font-weight: 700;
+    color: var(--deep-green);
+}
+
+.bubble-toolbar select {
+    appearance: none;
+    min-height: 42px;
+    max-width: 100%;
+    padding: 8px 38px 8px 14px;
+    border: 1px solid #A8B99A;
+    border-radius: 5px;
+    background: #F7FAF5 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23244B38' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 13px center;
+    color: var(--deep-green);
+    font: inherit;
+}
+
+#bubble-count {
+    margin-left: auto;
+    color: var(--forest);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.bubble-chart {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.bubble-chart svg {
+    display: block;
+    min-width: 700px;
+    width: 100%;
+    height: auto;
+}
+
+.bubble-scroll-hint {
+    display: none;
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
+
+.bubble-row-line,
+.bubble-column-line {
+    stroke: #E3E9E0;
+    stroke-width: 1;
+}
+
+.bubble-axis-heading {
+    fill: var(--forest);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.bubble-status-code {
+    fill: var(--deep-green);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.bubble-status-name,
+.bubble-column-label {
+    fill: #526257;
+    font-size: 14px;
+}
+
+.bubble-column-label {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.bubble-mark circle {
+    stroke: white;
+    stroke-width: 2;
+    cursor: pointer;
+}
+
+.bubble-mark circle:hover,
+.bubble-mark circle:focus-visible,
+.bubble-mark.is-selected circle {
+    stroke: var(--deep-green);
+    stroke-width: 3;
+}
+
+.bubble-value {
+    fill: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.bubble-size-legend text {
+    fill: #526257;
+    font-size: 13px;
+}
+
+.bubble-tooltip {
+    position: absolute;
+    z-index: 5;
+    max-width: 220px;
+    padding: 9px 12px;
+    border-radius: 5px;
+    background: var(--deep-green);
+    color: white;
+    font-size: 13px;
+    line-height: 1.4;
+    pointer-events: none;
+}
+
+.bubble-insight {
+    margin-top: 12px;
+    padding: 13px 16px;
+    border-left: 3px solid var(--gold);
+    background: var(--light-sage);
+    color: var(--deep-green);
+    font-weight: 700;
+}
+
+.bubble-details {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid #DDE6DB;
+}
+
+.bubble-details h4 {
+    color: var(--deep-green);
+    font-size: 1.1rem;
+}
+
+.bubble-details ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2px 24px;
+    margin: 8px 0 0 18px;
+    color: var(--text);
+}
+
+.bubble-more {
+    margin-top: 6px;
+}
+
+.bubble-method {
+    margin-top: 18px;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .bubble-scroll-hint {
+        display: block;
+    }
+
+    #bubble-count {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Visualization 3 – Bubble Chart Improvements */
+
+#visualization-3 {
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    padding: 4px 0 0;
+    background: transparent;
+    border: none;
+    overflow: visible;
+}
+
+#visualization-3 .bubble-chart {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#visualization-3 .bubble-chart svg {
+    display: block;
+    width: 100%;
+    min-width: 700px;
+    height: auto;
+}
+
+#visualization-3 .bubble-mark {
+    cursor: pointer;
+}
+
+#visualization-3 .bubble-mark:focus-visible circle {
+    stroke: var(--deep-green);
+    stroke-width: 3px;
+    outline: none;
+}
+
+#visualization-3 .bubble-details {
+    color: var(--text);
+}
+
+#visualization-3 .bubble-details p {
+    margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+    #visualization-3 {
+        padding: 0;
+    }
+
+    #visualization-3 .bubble-chart svg {
+        min-width: 700px;
+    }
+}
+
+/* Visualization 4 */
+
+/* Parrot conservation choropleth */
+
+/* Every rule is scoped to #parrot-conservation-viz */
+
+/* So nothing in this file can restyle the site's navigation/typography/visualizations */
+
+/* Fonts are inherited from the page */
+
+#parrot-conservation-viz {
+  --pcv-forest: #1F3B2D;
+  --pcv-ink: #243A30;
+  --pcv-cream: #F7F6F0;
+  --pcv-surface: #FFFFFF;
+  --pcv-border: #E1E7DD;
+  --pcv-border-strong: #C9D3C4;
+  --pcv-muted: #66756B;
+  --pcv-soft: #EDF1E9;
+  --pcv-ocean: #F3F5EF;
+  --pcv-graticule: #E3E8DE;
+  --pcv-land-empty: #E4E2DA;
+  --pcv-nodata: #D6D3C9;
+  --pcv-hatch: #A49E90;
+
+  /* Neutralise the .visualization-placeholder box if that class is left on */
+  display: block; width: 100%; min-height: 0; margin: 0; padding: 0;
+  border: 0; border-radius: 0; background: none; text-align: left;
+  color: var(--pcv-ink); font-size: 14px; line-height: 1.45;
+}
+#parrot-conservation-viz *,
+#parrot-conservation-viz *::before,
+#parrot-conservation-viz *::after { box-sizing: border-box; }
+#parrot-conservation-viz :is(p, h4, ul, dl, dt, dd) { margin: 0; padding: 0; }
+
+#parrot-conservation-viz .pcv-frame {
+  container-type: inline-size;
+  display: grid; gap: 18px; font-variant-numeric: tabular-nums;
+}
+
+/* Shared bits */
+#parrot-conservation-viz .pcv-kicker,
+#parrot-conservation-viz .pcv-section {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--pcv-muted); line-height: 1.3;
+}
+
+/* Map + panel row */
+#parrot-conservation-viz .pcv-main {
+  display: grid; grid-template-columns: minmax(0, 3fr) minmax(250px, 1fr);
+}
+#parrot-conservation-viz .pcv-mapcol { min-width: 0; padding-right: 20px; }
+
+/* Toolbar */
+#parrot-conservation-viz .pcv-toolbar {
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 12px; margin-bottom: 10px;
+}
+#parrot-conservation-viz .pcv-field { display: grid; gap: 4px; flex: 0 1 255px; min-width: 170px; }
+#parrot-conservation-viz .pcv-field:nth-child(2) { flex-basis: 232px; }
+#parrot-conservation-viz .pcv-field > span {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--pcv-muted);
+}
+#parrot-conservation-viz .pcv-field select {
+  appearance: none; -webkit-appearance: none; width: 100%; height: 34px; margin: 0;
+  padding: 0 30px 0 10px; font: inherit; font-size: 13px; color: var(--pcv-ink);
+  background-color: var(--pcv-cream); border: 1px solid var(--pcv-border); border-radius: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%2366756B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 11px center;
+  cursor: pointer; transition: border-color .15s, box-shadow .15s;
+}
+#parrot-conservation-viz .pcv-field select:hover { border-color: var(--pcv-border-strong); }
+#parrot-conservation-viz .pcv-field select:focus-visible {
+  outline: none; border-color: var(--pcv-forest); box-shadow: 0 0 0 3px var(--pcv-soft);
+}
+#parrot-conservation-viz .pcv-highest {
+  margin-left: auto; display: inline-flex; align-items: center; gap: 6px; min-height: 30px;
+  padding: 4px 11px; font-size: 12.5px; color: var(--pcv-muted);
+  background: var(--pcv-cream); border: 1px solid var(--pcv-border); border-radius: 999px;
+}
+#parrot-conservation-viz .pcv-highest i { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+#parrot-conservation-viz .pcv-highest b { color: var(--pcv-forest); font-weight: 700; }
+
+/* Map */
+#parrot-conservation-viz .pcv-map svg { display: block; width: 100%; height: auto; }
+#parrot-conservation-viz .pcv-sphere { fill: var(--pcv-ocean); stroke: var(--pcv-border); stroke-width: 1; }
+#parrot-conservation-viz .pcv-graticule { fill: none; stroke: var(--pcv-graticule); stroke-width: .6; }
+#parrot-conservation-viz .pcv-realm {
+  stroke: var(--pcv-surface); stroke-width: .7; stroke-linejoin: round; cursor: pointer;
+  transition: opacity .25s ease, stroke .15s, stroke-width .15s;
+}
+#parrot-conservation-viz .pcv-realm.pcv-empty { fill: var(--pcv-land-empty); cursor: default; }
+#parrot-conservation-viz .pcv-realm.pcv-nodata { fill: var(--pcv-nodata); }
+#parrot-conservation-viz .pcv-island { stroke: var(--pcv-surface); stroke-width: 1.5; }
+#parrot-conservation-viz .pcv-realm.pcv-hot { stroke: var(--pcv-forest); stroke-width: 1.3; }
+#parrot-conservation-viz .pcv-realm.pcv-sel { stroke: var(--pcv-forest); stroke-width: 1.8; }
+#parrot-conservation-viz .pcv-dim { opacity: .32; }
+#parrot-conservation-viz .pcv-hatch { fill: url(#pcv-hatch); pointer-events: none; opacity: 0; transition: opacity .35s ease; }
+#parrot-conservation-viz .pcv-hatch.pcv-on { opacity: 1; }
+#parrot-conservation-viz .pcv-hatch-line { stroke: var(--pcv-hatch); stroke-width: 1.1; }
+#parrot-conservation-viz .pcv-label {
+  font-size: 12px; font-weight: 700; fill: var(--pcv-ink); pointer-events: none;
+  paint-order: stroke; stroke: var(--pcv-surface); stroke-width: 3px; stroke-linejoin: round;
+  transition: opacity .25s;
+}
+#parrot-conservation-viz .pcv-label.pcv-dim { opacity: .25; }
+
+/* Legend */
+#parrot-conservation-viz .pcv-legend {
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 6px 22px; margin-top: 8px;
+}
+#parrot-conservation-viz .pcv-scale { flex: 0 1 300px; min-width: 200px; }
+#parrot-conservation-viz .pcv-scale-title { font-size: 11.5px; font-weight: 700; color: var(--pcv-ink); margin-bottom: 4px; }
+#parrot-conservation-viz .pcv-ramp { height: 8px; border-radius: 2px; transition: background .4s; }
+#parrot-conservation-viz .pcv-ticks { position: relative; height: 16px; margin-top: 3px; font-size: 10.5px; color: var(--pcv-muted); }
+#parrot-conservation-viz .pcv-ticks span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+#parrot-conservation-viz .pcv-ticks span:first-child { transform: none; }
+#parrot-conservation-viz .pcv-ticks span:last-child { transform: translateX(-100%); }
+#parrot-conservation-viz .pcv-keyitem {
+  display: inline-flex; align-items: center; gap: 6px; padding-bottom: 15px;
+  font-size: 11.5px; color: var(--pcv-muted);
+}
+#parrot-conservation-viz .pcv-keyitem svg { width: 18px; height: 10px; border-radius: 2px; display: block; }
+
+/* Side Panel */
+/* On desktop the panel is pinned to the map column's height; only the species list scrolls. */
+#parrot-conservation-viz .pcv-side { position: relative; min-height: 430px; border-left: 1px solid var(--pcv-border); }
+#parrot-conservation-viz .pcv-panel {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  padding-left: 20px; overflow-y: auto; scrollbar-width: thin;
+}
+#parrot-conservation-viz .pcv-panel > * { flex: none; }
+#parrot-conservation-viz .pcv-panel.pcv-enter { animation: pcvIn .3s ease both; }
+@keyframes pcvIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+#parrot-conservation-viz .pcv-loading { font-size: 13px; color: var(--pcv-muted); padding-top: 8px; }
+
+#parrot-conservation-viz .pcv-phead { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+#parrot-conservation-viz .pcv-ptitle {
+  margin-top: 2px; font-size: 17px; font-weight: 700; line-height: 1.2; color: var(--pcv-forest);
+}
+#parrot-conservation-viz .pcv-close {
+  flex: none; width: 26px; height: 26px; margin: 0; padding: 0; border-radius: 6px;
+  border: 1px solid var(--pcv-border); background: var(--pcv-surface); color: var(--pcv-muted);
+  font: inherit; font-size: 16px; line-height: 1; cursor: pointer; transition: background .15s, color .15s;
+}
+#parrot-conservation-viz .pcv-close:hover { background: var(--pcv-cream); color: var(--pcv-ink); }
+#parrot-conservation-viz .pcv-close:focus-visible { outline: 2px solid var(--pcv-forest); outline-offset: 2px; }
+
+#parrot-conservation-viz .pcv-total { display: flex; align-items: baseline; gap: 7px; margin-top: 10px; }
+#parrot-conservation-viz .pcv-total b { font-size: 30px; font-weight: 700; line-height: 1; color: var(--pcv-forest); letter-spacing: -.01em; }
+#parrot-conservation-viz .pcv-total span { font-size: 13px; color: var(--pcv-muted); }
+#parrot-conservation-viz .pcv-sub {
+  margin: 3px 0 12px; padding-bottom: 12px; border-bottom: 1px solid var(--pcv-border);
+  font-size: 12px; color: var(--pcv-muted);
+}
+
+#parrot-conservation-viz .pcv-section { margin-bottom: 7px; }
+#parrot-conservation-viz .pcv-stack { display: flex; gap: 1.5px; height: 10px; border-radius: 3px; overflow: hidden; }
+#parrot-conservation-viz .pcv-stack div { height: 100%; min-width: 2px; transition: flex-grow .4s ease, opacity .15s; }
+#parrot-conservation-viz .pcv-stack div:hover { opacity: .8; }
+#parrot-conservation-viz .pcv-chips {
+  display: flex; flex-wrap: wrap; gap: 5px 12px; margin: 8px 0 0; list-style: none; font-size: 11.5px;
+}
+#parrot-conservation-viz .pcv-chips li { display: inline-flex; align-items: center; gap: 5px; cursor: default; }
+#parrot-conservation-viz .pcv-chips i { width: 8px; height: 8px; border-radius: 2px; flex: none; }
+#parrot-conservation-viz .pcv-chips b { font-weight: 700; color: var(--pcv-ink); letter-spacing: .02em; }
+#parrot-conservation-viz .pcv-chips span { color: var(--pcv-muted); }
+
+/* Overview facts */
+#parrot-conservation-viz .pcv-facts { display: grid; gap: 7px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--pcv-border); }
+#parrot-conservation-viz .pcv-facts div { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+#parrot-conservation-viz .pcv-facts dt { font-size: 12.5px; color: var(--pcv-muted); }
+#parrot-conservation-viz .pcv-facts dd { font-size: 14px; font-weight: 700; color: var(--pcv-ink); }
+#parrot-conservation-viz .pcv-hint {
+  display: flex; gap: 8px; align-items: flex-start; margin-top: 14px; padding: 10px 12px;
+  font-size: 12.5px; line-height: 1.45; color: var(--pcv-muted);
+  background: var(--pcv-cream); border-radius: 6px;
+}
+#parrot-conservation-viz .pcv-hint svg { flex: none; margin-top: 1px; color: var(--pcv-forest); }
+
+/* Species list */
+#parrot-conservation-viz .pcv-listtitle { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--pcv-border); }
+#parrot-conservation-viz .pcv-panel > .pcv-listwrap {
+  flex: 1 1 auto; min-height: 120px; overflow-y: auto; overscroll-behavior: contain;
+  margin-right: -4px; padding-right: 8px; scrollbar-width: thin; scrollbar-color: var(--pcv-border-strong) transparent;
+}
+#parrot-conservation-viz .pcv-listwrap:focus-visible { outline: 2px solid var(--pcv-soft); }
+#parrot-conservation-viz .pcv-group {
+  position: sticky; top: 0; z-index: 1; display: flex; align-items: center; gap: 6px;
+  padding: 8px 0 4px; background: var(--pcv-surface);
+  font-size: 11.5px; font-weight: 600; color: var(--pcv-ink); border-bottom: 1px solid var(--pcv-border);
+}
+#parrot-conservation-viz .pcv-group i { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+#parrot-conservation-viz .pcv-group b { font-weight: 700; }
+#parrot-conservation-viz .pcv-group span { margin-left: auto; color: var(--pcv-muted); font-weight: 500; }
+#parrot-conservation-viz .pcv-list { list-style: none; }
+#parrot-conservation-viz .pcv-list li { display: grid; gap: 1px; padding: 6px 0; border-bottom: 1px solid var(--pcv-border); }
+#parrot-conservation-viz .pcv-list li:last-child { border-bottom: 0; }
+#parrot-conservation-viz .pcv-name { font-size: 13px; font-weight: 600; line-height: 1.3; color: var(--pcv-ink); }
+#parrot-conservation-viz .pcv-meta { font-size: 11.5px; line-height: 1.35; color: var(--pcv-muted); }
+#parrot-conservation-viz .pcv-pe {
+  display: inline-block; margin-left: 6px; padding: 0 5px; border-radius: 4px; vertical-align: 1px;
+  font-size: 10px; font-weight: 600; line-height: 16px; color: #8a2a22; background: #f8e7e3;
+}
+#parrot-conservation-viz .pcv-none { margin-top: 8px; font-size: 12.5px; color: var(--pcv-muted); }
+
+/* Ranking */
+#parrot-conservation-viz .pcv-rank { padding-top: 16px; border-top: 1px solid var(--pcv-border); }
+#parrot-conservation-viz .pcv-rankhead {
+  display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 4px 16px; margin-bottom: 8px;
+}
+#parrot-conservation-viz .pcv-ranktitle { margin-top: 2px; font-size: 15px; font-weight: 700; line-height: 1.3; color: var(--pcv-forest); }
+#parrot-conservation-viz .pcv-rankhint { font-size: 12px; color: var(--pcv-muted); }
+#parrot-conservation-viz .pcv-bars svg { display: block; width: 100%; height: auto; overflow: visible; }
+#parrot-conservation-viz .pcv-row { cursor: pointer; outline: none; transition: opacity .2s; }
+#parrot-conservation-viz .pcv-row .pcv-hit { fill: transparent; }
+#parrot-conservation-viz .pcv-row.pcv-top .pcv-hit { fill: var(--pcv-cream); }
+#parrot-conservation-viz .pcv-row:hover .pcv-hit,
+#parrot-conservation-viz .pcv-row:focus-visible .pcv-hit,
+#parrot-conservation-viz .pcv-row.pcv-selrow .pcv-hit { fill: var(--pcv-soft); }
+#parrot-conservation-viz .pcv-row:focus-visible .pcv-hit { stroke: var(--pcv-forest); stroke-width: 1; }
+#parrot-conservation-viz .pcv-row text { font-size: 12.5px; fill: var(--pcv-ink); }
+#parrot-conservation-viz .pcv-row .pcv-rnum { fill: var(--pcv-muted); font-size: 11px; font-weight: 600; }
+#parrot-conservation-viz .pcv-row .pcv-rname { font-weight: 500; }
+#parrot-conservation-viz .pcv-row.pcv-top .pcv-rname { font-weight: 700; fill: var(--pcv-forest); }
+#parrot-conservation-viz .pcv-row .pcv-val { font-weight: 700; }
+#parrot-conservation-viz .pcv-row .pcv-n { fill: var(--pcv-muted); font-size: 11.5px; }
+#parrot-conservation-viz .pcv-row .pcv-tag { fill: var(--pcv-forest); font-size: 10px; font-weight: 700; letter-spacing: .08em; }
+#parrot-conservation-viz .pcv-row .pcv-track { fill: var(--pcv-cream); }
+#parrot-conservation-viz .pcv-row.pcv-dim { opacity: .4; }
+
+#parrot-conservation-viz .pcv-note { font-size: 11.5px; line-height: 1.55; color: var(--pcv-muted); }
+#parrot-conservation-viz .pcv-error {
+  padding: 16px; font-size: 13px; color: #8a2a22; background: #fbf0ee; border-radius: 6px;
+}
+
+/* Narrow containers (phones, narrow cards): stack panel under the map */
+@container (max-width: 760px) {
+  #parrot-conservation-viz .pcv-main { grid-template-columns: minmax(0, 1fr); }
+  #parrot-conservation-viz .pcv-mapcol { padding-right: 0; }
+  #parrot-conservation-viz .pcv-highest { margin-left: 0; }
+  #parrot-conservation-viz .pcv-side {
+    min-height: 0; margin-top: 14px; padding-top: 14px; border-left: 0; border-top: 1px solid var(--pcv-border);
+  }
+  #parrot-conservation-viz .pcv-panel { position: static; padding-left: 0; overflow: visible; }
+  #parrot-conservation-viz .pcv-panel > .pcv-listwrap { max-height: 300px; }
+}
+@container (max-width: 440px) {
+  #parrot-conservation-viz .pcv-field { flex-basis: 100%; }
+  #parrot-conservation-viz .pcv-rankhint { display: none; }
+}
+
+/* Tooltip (position: fixed, follows the cursor) */
+#parrot-conservation-viz .pcv-tip {
+  position: fixed; z-index: 1100; pointer-events: none; width: max-content; max-width: 260px;
+  padding: 10px 12px; font-size: 12.5px; line-height: 1.4; color: var(--pcv-ink);
+  background: var(--pcv-surface); border: 1px solid var(--pcv-border); border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(31, 59, 45, .12);
+}
+#parrot-conservation-viz .pcv-tip[hidden] { display: none; }
+#parrot-conservation-viz .pcv-tt-title { font-size: 14px; font-weight: 700; color: var(--pcv-forest); }
+#parrot-conservation-viz .pcv-tt-title span { font-size: 12px; font-weight: 400; color: var(--pcv-muted); }
+#parrot-conservation-viz .pcv-tt-big { display: flex; align-items: baseline; gap: 7px; margin: 6px 0 1px; }
+#parrot-conservation-viz .pcv-tt-big b { font-size: 20px; font-weight: 700; }
+#parrot-conservation-viz .pcv-tt-big i { width: 9px; height: 9px; border-radius: 2px; align-self: center; }
+#parrot-conservation-viz .pcv-tt-big span { color: var(--pcv-muted); }
+#parrot-conservation-viz .pcv-tt-lab { font-size: 11.5px; color: var(--pcv-muted); margin-bottom: 7px; }
+#parrot-conservation-viz .pcv-tip dl {
+  display: grid; grid-template-columns: 1fr auto; gap: 2px 14px; padding-top: 7px; border-top: 1px solid var(--pcv-border);
+}
+#parrot-conservation-viz .pcv-tip dt { color: var(--pcv-muted); }
+#parrot-conservation-viz .pcv-tip dd { font-weight: 700; text-align: right; }
+#parrot-conservation-viz .pcv-tt-warn { margin-top: 6px; color: var(--pcv-ink); }
+#parrot-conservation-viz .pcv-tt-hint { margin-top: 7px; font-size: 11px; color: var(--pcv-muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  #parrot-conservation-viz .pcv-panel.pcv-enter { animation: none; }
+  #parrot-conservation-viz * { transition: none !important; }
+}
+
+/* Fallback for older browsers */
+
+@supports not (container-type: inline-size) {
+  @media (max-width: 760px) {
+    #parrot-conservation-viz .pcv-main {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    #parrot-conservation-viz .pcv-mapcol {
+      padding-right: 0;
+    }
+
+    #parrot-conservation-viz .pcv-side {
+      min-height: 0;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-left: 0;
+      border-top: 1px solid var(--pcv-border);
+    }
+
+    #parrot-conservation-viz .pcv-panel {
+      position: static;
+      padding-left: 0;
+      overflow: visible;
+    }
+  }
+}
+
+/* Keyboard accessibility */
+
+#parrot-conservation-viz .pcv-realm:focus-visible {
+  outline: none;
+  stroke: var(--pcv-forest);
+  stroke-width: 2.5px;
+}
+
+/* Tooltip positioning improvements */
+
+#parrot-conservation-viz .pcv-tip {
+  max-height: min(70vh, 420px);
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+}

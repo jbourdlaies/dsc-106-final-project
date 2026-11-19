@@ -19,6 +19,8 @@
     <!-- Visualization JavaScript -->
     <script src="visualizations/visualization1.js" defer></script>
     <script src="visualizations/visualization2.js" defer></script>
+    <script src="visualizations/visualization3.js" defer></script>
+    <script src="visualizations/visualization4.js" defer></script>
 
 </head>
 
@@ -264,7 +266,7 @@
                                 DATA VISUALIZATION 01
                             </span>
 
-                            <h3>Extinction Risk Across Parrot Families</h3>
+                            <h3>How Does Extinction Risk Vary Across Parrot Families?</h3>
                         </div>
 
                         <span class="coming-soon">
@@ -305,7 +307,7 @@
                                 DATA VISUALIZATION 02
                             </span>
 
-                            <h3>Which Parrot Traits Are Associated With Extinction Risk?</h3>
+                            <h3>Do Smaller Habitats Correlate With Extinction Risk?</h3>
                         </div>
 
                         <span class="coming-soon">
@@ -331,36 +333,68 @@
                                 DATA VISUALIZATION 03
                             </span>
 
-                            <h3>Descriptive Title (PLACEHOLDER)</h3>
+                            <h3>Does Habitat Breadth Relate to Parrot Extinction Risk?</h3>
                         </div>
 
                         <span class="coming-soon">
-                            Graph Type
-                            (PLACEHOLDER)
+                            Interactive Bubble Chart
                         </span>
 
                     </div>
 
-                    <div id="visualization-3"
-                         class="visualization-placeholder">
+                    <div id="visualization-3">
 
-                        <div class="placeholder-content">
+                        <p class="bubble-intro">
+                            Explore how the number of major habitats used by
+                            parrot species relates to their IUCN conservation
+                            status. Each bubble represents the number of species
+                            within a particular combination of habitat breadth
+                            and conservation category.
+                        </p>
 
-                            <span class="placeholder-icon">🌎</span>
+                        <div class="bubble-toolbar">
 
-                            <h3>Visualization Three</h3>
+                            <label for="bubble-range-filter">
+                                Geographic Range:
+                            </label>
 
-                            <p>
-                                Short Description
-                                (PLACEHOLDER)
-                            </p>
+                            <select id="bubble-range-filter">
+                                <option value="all">All Species</option>
+                                <option value="restricted">Restricted Range</option>
+                                <option value="unrestricted">Non-Restricted Range</option>
+                            </select>
+
+                            <span id="bubble-count">
+                                Loading species data...
+                            </span>
 
                         </div>
+
+                        <div id="bubble-chart" class="bubble-chart"></div>
+
+                        <p class="bubble-scroll-hint">
+                            ← Scroll horizontally to explore the chart →
+                        </p>
+
+                        <div id="bubble-insight" class="bubble-insight">
+                            Loading data insights...
+                        </div>
+
+                        <div id="bubble-details" class="bubble-details">
+                            <p>Select a bubble to see species names.</p>
+                        </div>
+
+                        <p class="bubble-method">
+                            <strong>How to read this chart:</strong>
+                            Bubble size represents the number of species.
+                            Colors represent IUCN conservation categories.
+                            Species categorized as Vulnerable, Endangered,
+                            or Critically Endangered are considered threatened.
+                        </p>
 
                     </div>
 
                 </div>
-
 
                 <!-- Visualization 4 -->
 
@@ -373,36 +407,33 @@
                                 DATA VISUALIZATION 04
                             </span>
 
-                            <h3>Descriptive Title (PLACEHOLDER)</h3>
+                            <h3>Where do Parrots Live, and Where are They Most at Risk?</h3>
                         </div>
 
                         <span class="coming-soon">
-                            Graph Type
-                            (PLACEHOLDER)
+                            Interactive Conservation Choropleth Map
                         </span>
 
                     </div>
 
-                    <div id="visualization-4"
-                         class="visualization-placeholder">
+                    <div id="parrot-conservation-viz"
+                        class="visualization-mount">
 
                         <div class="placeholder-content">
+                            <span class="placeholder-icon">🌎</span>
 
-                            <span class="placeholder-icon">📊</span>
-
-                            <h3>Visualization Four</h3>
+                            <h3>Exploring Global Parrot Conservation</h3>
 
                             <p>
-                                Short Description
-                                (PLACEHOLDER)
+                                Discover the geographic distribution of parrot species,
+                                compare conservation status across regions, and identify
+                                areas with the greatest concentration of threatened species.
                             </p>
-
                         </div>
 
                     </div>
 
                 </div>
-
 
                 <p class="visualization-note">
                     Interactive visualizations developed using D3.js.
